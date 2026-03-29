@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OcelotApiGateway", "OcelotApiGateway\OcelotApiGateway.csproj", "{E841250C-2C61-42AF-93DF-4CFF019F838C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthService", "AuthService\AuthService.csproj", "{C0D8A131-9E15-42B9-8AE7-3B27ABAB66AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductService", "ProductService\ProductService.csproj", "{D496D0CE-C4AD-4442-99A8-99944B9DEA04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationService", "NotificationService\NotificationService.csproj", "{5EE3A1F9-86CB-422A-9065-120AB3E6BF62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogsService", "BlogsService\BlogsService.csproj", "{E360A85A-009D-4E01-AD52-A3635EA8D2D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubscriptionService", "SubscriptionService\SubscriptionService.csproj", "{C32A4CE1-415E-4D04-8840-D50137CED64F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E841250C-2C61-42AF-93DF-4CFF019F838C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E841250C-2C61-42AF-93DF-4CFF019F838C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E841250C-2C61-42AF-93DF-4CFF019F838C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E841250C-2C61-42AF-93DF-4CFF019F838C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0D8A131-9E15-42B9-8AE7-3B27ABAB66AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0D8A131-9E15-42B9-8AE7-3B27ABAB66AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0D8A131-9E15-42B9-8AE7-3B27ABAB66AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0D8A131-9E15-42B9-8AE7-3B27ABAB66AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D496D0CE-C4AD-4442-99A8-99944B9DEA04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D496D0CE-C4AD-4442-99A8-99944B9DEA04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D496D0CE-C4AD-4442-99A8-99944B9DEA04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D496D0CE-C4AD-4442-99A8-99944B9DEA04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EE3A1F9-86CB-422A-9065-120AB3E6BF62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EE3A1F9-86CB-422A-9065-120AB3E6BF62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EE3A1F9-86CB-422A-9065-120AB3E6BF62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EE3A1F9-86CB-422A-9065-120AB3E6BF62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E360A85A-009D-4E01-AD52-A3635EA8D2D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E360A85A-009D-4E01-AD52-A3635EA8D2D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E360A85A-009D-4E01-AD52-A3635EA8D2D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E360A85A-009D-4E01-AD52-A3635EA8D2D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C32A4CE1-415E-4D04-8840-D50137CED64F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C32A4CE1-415E-4D04-8840-D50137CED64F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C32A4CE1-415E-4D04-8840-D50137CED64F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C32A4CE1-415E-4D04-8840-D50137CED64F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {32E7F6E1-DAC7-42A2-845D-393C9FD4BFB1}
+	EndGlobalSection
+EndGlobal
