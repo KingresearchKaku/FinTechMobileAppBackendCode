@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CXaANhVwRPo=",
+  "dgSpecHash": "BGchNXha6ho=",
   "success": true,
-  "projectFilePath": "/Users/harindersahu/Downloads/back-end-testing/FinTechMobileAppBackendCode/SubscriptionService/SubscriptionService.csproj",
+  "projectFilePath": "/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/SubscriptionService/SubscriptionService.csproj",
   "expectedPackageFiles": [
     "/Users/harindersahu/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "/Users/harindersahu/.nuget/packages/microsoft.openapi/1.6.14/microsoft.openapi.1.6.14.nupkg.sha512",
@@ -11,5 +11,15 @@
     "/Users/harindersahu/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.6.2/swashbuckle.aspnetcore.swaggergen.6.6.2.nupkg.sha512",
     "/Users/harindersahu/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.6.2/swashbuckle.aspnetcore.swaggerui.6.6.2.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "message": "Problem reading the cache file /Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/SubscriptionService/obj/project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0.",
+      "projectPath": "/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/SubscriptionService/SubscriptionService.csproj",
+      "warningLevel": 1,
+      "filePath": "/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/SubscriptionService/SubscriptionService.csproj",
+      "targetGraphs": []
+    }
+  ]
 }

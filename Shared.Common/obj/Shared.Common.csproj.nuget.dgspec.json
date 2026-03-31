@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/harindersahu/Downloads/back-end-testing/FinTechMobileAppBackendCode/Shared.Common/Shared.Common.csproj": {}
+    "/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/Shared.Common/Shared.Common.csproj": {}
   },
   "projects": {
-    "/Users/harindersahu/Downloads/back-end-testing/FinTechMobileAppBackendCode/Shared.Common/Shared.Common.csproj": {
+    "/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/Shared.Common/Shared.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/harindersahu/Downloads/back-end-testing/FinTechMobileAppBackendCode/Shared.Common/Shared.Common.csproj",
+        "projectUniqueName": "/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/Shared.Common/Shared.Common.csproj",
         "projectName": "Shared.Common",
-        "projectPath": "/Users/harindersahu/Downloads/back-end-testing/FinTechMobileAppBackendCode/Shared.Common/Shared.Common.csproj",
+        "projectPath": "/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/Shared.Common/Shared.Common.csproj",
         "packagesPath": "/Users/harindersahu/.nuget/packages/",
-        "outputPath": "/Users/harindersahu/Downloads/back-end-testing/FinTechMobileAppBackendCode/Shared.Common/obj/",
+        "outputPath": "/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/Shared.Common/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/harindersahu/.nuget/NuGet/NuGet.Config"

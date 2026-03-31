@@ -1962,11 +1962,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/harindersahu/Downloads/back-end-testing/FinTechMobileAppBackendCode/AuthService/AuthService.csproj",
+      "projectUniqueName": "/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/AuthService/AuthService.csproj",
       "projectName": "AuthService",
-      "projectPath": "/Users/harindersahu/Downloads/back-end-testing/FinTechMobileAppBackendCode/AuthService/AuthService.csproj",
+      "projectPath": "/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/AuthService/AuthService.csproj",
       "packagesPath": "/Users/harindersahu/.nuget/packages/",
-      "outputPath": "/Users/harindersahu/Downloads/back-end-testing/FinTechMobileAppBackendCode/AuthService/obj/",
+      "outputPath": "/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/AuthService/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/harindersahu/.nuget/NuGet/NuGet.Config"
@@ -1981,8 +1981,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/Users/harindersahu/Downloads/back-end-testing/FinTechMobileAppBackendCode/Shared.Common/Shared.Common.csproj": {
-              "projectPath": "/Users/harindersahu/Downloads/back-end-testing/FinTechMobileAppBackendCode/Shared.Common/Shared.Common.csproj"
+            "/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/Shared.Common/Shared.Common.csproj": {
+              "projectPath": "/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/Shared.Common/Shared.Common.csproj"
             }
           }
         }
@@ -2042,5 +2042,13 @@
         "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file /Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/AuthService/obj/project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0."
+    }
+  ]
 }

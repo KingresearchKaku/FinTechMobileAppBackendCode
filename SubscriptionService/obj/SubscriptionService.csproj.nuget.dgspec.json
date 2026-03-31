@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/harindersahu/Downloads/back-end-testing/FinTechMobileAppBackendCode/SubscriptionService/SubscriptionService.csproj": {}
+    "/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/SubscriptionService/SubscriptionService.csproj": {}
   },
   "projects": {
-    "/Users/harindersahu/Downloads/back-end-testing/FinTechMobileAppBackendCode/SubscriptionService/SubscriptionService.csproj": {
+    "/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/SubscriptionService/SubscriptionService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/harindersahu/Downloads/back-end-testing/FinTechMobileAppBackendCode/SubscriptionService/SubscriptionService.csproj",
+        "projectUniqueName": "/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/SubscriptionService/SubscriptionService.csproj",
         "projectName": "SubscriptionService",
-        "projectPath": "/Users/harindersahu/Downloads/back-end-testing/FinTechMobileAppBackendCode/SubscriptionService/SubscriptionService.csproj",
+        "projectPath": "/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/SubscriptionService/SubscriptionService.csproj",
         "packagesPath": "/Users/harindersahu/.nuget/packages/",
-        "outputPath": "/Users/harindersahu/Downloads/back-end-testing/FinTechMobileAppBackendCode/SubscriptionService/obj/",
+        "outputPath": "/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/SubscriptionService/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/harindersahu/.nuget/NuGet/NuGet.Config"

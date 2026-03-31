@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/harindersahu/Downloads/back-end-testing/FinTechMobileAppBackendCode/OcelotApiGateway/OcelotApiGateway.csproj": {}
+    "/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/OcelotApiGateway/OcelotApiGateway.csproj": {}
   },
   "projects": {
-    "/Users/harindersahu/Downloads/back-end-testing/FinTechMobileAppBackendCode/OcelotApiGateway/OcelotApiGateway.csproj": {
+    "/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/OcelotApiGateway/OcelotApiGateway.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/harindersahu/Downloads/back-end-testing/FinTechMobileAppBackendCode/OcelotApiGateway/OcelotApiGateway.csproj",
+        "projectUniqueName": "/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/OcelotApiGateway/OcelotApiGateway.csproj",
         "projectName": "OcelotApiGateway",
-        "projectPath": "/Users/harindersahu/Downloads/back-end-testing/FinTechMobileAppBackendCode/OcelotApiGateway/OcelotApiGateway.csproj",
+        "projectPath": "/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/OcelotApiGateway/OcelotApiGateway.csproj",
         "packagesPath": "/Users/harindersahu/.nuget/packages/",
-        "outputPath": "/Users/harindersahu/Downloads/back-end-testing/FinTechMobileAppBackendCode/OcelotApiGateway/obj/",
+        "outputPath": "/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/OcelotApiGateway/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/harindersahu/.nuget/NuGet/NuGet.Config"

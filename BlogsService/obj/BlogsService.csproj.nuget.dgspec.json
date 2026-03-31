@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/harindersahu/Downloads/back-end-testing/FinTechMobileAppBackendCode/BlogsService/BlogsService.csproj": {}
+    "/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/BlogsService/BlogsService.csproj": {}
   },
   "projects": {
-    "/Users/harindersahu/Downloads/back-end-testing/FinTechMobileAppBackendCode/BlogsService/BlogsService.csproj": {
+    "/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/BlogsService/BlogsService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/harindersahu/Downloads/back-end-testing/FinTechMobileAppBackendCode/BlogsService/BlogsService.csproj",
+        "projectUniqueName": "/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/BlogsService/BlogsService.csproj",
         "projectName": "BlogsService",
-        "projectPath": "/Users/harindersahu/Downloads/back-end-testing/FinTechMobileAppBackendCode/BlogsService/BlogsService.csproj",
+        "projectPath": "/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/BlogsService/BlogsService.csproj",
         "packagesPath": "/Users/harindersahu/.nuget/packages/",
-        "outputPath": "/Users/harindersahu/Downloads/back-end-testing/FinTechMobileAppBackendCode/BlogsService/obj/",
+        "outputPath": "/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/BlogsService/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/harindersahu/.nuget/NuGet/NuGet.Config"

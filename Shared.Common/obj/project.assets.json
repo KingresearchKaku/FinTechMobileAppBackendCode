@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/harindersahu/Downloads/back-end-testing/FinTechMobileAppBackendCode/Shared.Common/Shared.Common.csproj",
+      "projectUniqueName": "/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/Shared.Common/Shared.Common.csproj",
       "projectName": "Shared.Common",
-      "projectPath": "/Users/harindersahu/Downloads/back-end-testing/FinTechMobileAppBackendCode/Shared.Common/Shared.Common.csproj",
+      "projectPath": "/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/Shared.Common/Shared.Common.csproj",
       "packagesPath": "/Users/harindersahu/.nuget/packages/",
-      "outputPath": "/Users/harindersahu/Downloads/back-end-testing/FinTechMobileAppBackendCode/Shared.Common/obj/",
+      "outputPath": "/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/Shared.Common/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/harindersahu/.nuget/NuGet/NuGet.Config"
@@ -68,5 +68,13 @@
         "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file /Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/Shared.Common/obj/project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0."
+    }
+  ]
 }

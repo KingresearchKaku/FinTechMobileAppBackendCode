@@ -452,11 +452,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/harindersahu/Downloads/back-end-testing/FinTechMobileAppBackendCode/ProductService/ProductService.csproj",
+      "projectUniqueName": "/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/ProductService/ProductService.csproj",
       "projectName": "ProductService",
-      "projectPath": "/Users/harindersahu/Downloads/back-end-testing/FinTechMobileAppBackendCode/ProductService/ProductService.csproj",
+      "projectPath": "/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/ProductService/ProductService.csproj",
       "packagesPath": "/Users/harindersahu/.nuget/packages/",
-      "outputPath": "/Users/harindersahu/Downloads/back-end-testing/FinTechMobileAppBackendCode/ProductService/obj/",
+      "outputPath": "/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/ProductService/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/harindersahu/.nuget/NuGet/NuGet.Config"
@@ -516,5 +516,13 @@
         "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file /Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/ProductService/obj/project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0."
+    }
+  ]
 }

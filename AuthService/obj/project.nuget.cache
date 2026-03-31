@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nHn96eyhL+M=",
+  "dgSpecHash": "a+d+8KZ2uwA=",
   "success": true,
-  "projectFilePath": "/Users/harindersahu/Downloads/back-end-testing/FinTechMobileAppBackendCode/AuthService/AuthService.csproj",
+  "projectFilePath": "/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/AuthService/AuthService.csproj",
   "expectedPackageFiles": [
     "/Users/harindersahu/.nuget/packages/microsoft.bcl.cryptography/8.0.0/microsoft.bcl.cryptography.8.0.0.nupkg.sha512",
     "/Users/harindersahu/.nuget/packages/microsoft.data.sqlclient/7.0.0/microsoft.data.sqlclient.7.0.0.nupkg.sha512",
@@ -42,5 +42,15 @@
     "/Users/harindersahu/.nuget/packages/system.security.cryptography.pkcs/8.0.1/system.security.cryptography.pkcs.8.0.1.nupkg.sha512",
     "/Users/harindersahu/.nuget/packages/system.security.cryptography.protecteddata/8.0.0/system.security.cryptography.protecteddata.8.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "message": "Problem reading the cache file /Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/AuthService/obj/project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0.",
+      "projectPath": "/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/AuthService/AuthService.csproj",
+      "warningLevel": 1,
+      "filePath": "/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/AuthService/AuthService.csproj",
+      "targetGraphs": []
+    }
+  ]
 }
