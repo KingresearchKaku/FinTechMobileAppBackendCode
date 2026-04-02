@@ -1,6 +1,7 @@
 ﻿using AuthService.Data;
 using AuthService.Models;
 using AuthService.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
@@ -78,7 +79,7 @@ namespace AuthService.Controllers
         }
 
 
-
+[Authorize]
         //OtpLogin Api 
         [HttpGet("get-user-details")]
         public async Task<IActionResult> GetUserDetailsById()
@@ -108,9 +109,9 @@ namespace AuthService.Controllers
 
         //Method to refresh JWT token using refresh token we will get new access token and new refresh token
         [HttpPost("refresh-token")]
-        public async Task<IActionResult> RefreshToken(string AccessToken)
+        public async Task<IActionResult> RefreshToken(string RefreshToken, Guid MobileUserId)
         {
-            return Ok(await _authService.RefreshTokenAsync(AccessToken));
+            return Ok(await _authService.RefreshTokenAsync(RefreshToken, MobileUserId));
         }
 
 

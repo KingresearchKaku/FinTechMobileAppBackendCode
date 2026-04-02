@@ -3,7 +3,7 @@ namespace AuthService.Models
     public class RegisterRequestDto
     {
 
-        public string MobileUserId { get; set; }
+        public Guid MobileUserId { get; set; }
 
 
         public string Name { get; set; }

@@ -15,7 +15,7 @@ namespace AuthService.Services
 
        public Task<CommonApiResponse<bool>> UpdateFcmTokenAsync(string NewFcmToken);
 
-       public Task<CommonApiResponse<RefreshTokenResponseDto>> RefreshTokenAsync(string AccessToken );
+       public Task<CommonApiResponse<RefreshTokenResponseDto>> RefreshTokenAsync(string RefreshToken ,Guid MobileUserId);
 
        public Task<CommonApiResponse<string>> GetAppVersionAsync();
 

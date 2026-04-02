@@ -14,10 +14,14 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 <<<<<<< HEAD
+<<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1d6619e03350d8a86ab1152268058fffc9693590")]
 =======
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+31cf2eca2b0b89618ef034bb83cf9f22020f6f39")]
 >>>>>>> cadea66 (your message)
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cadea66b26463a593b0f0159ae215e6e82fe0e88")]
+>>>>>>> ae3b4bf (auth added)
 [assembly: System.Reflection.AssemblyProductAttribute("SubscriptionService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SubscriptionService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

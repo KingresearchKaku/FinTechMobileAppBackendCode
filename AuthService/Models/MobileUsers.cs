@@ -21,6 +21,8 @@
         public string? Email { get; set; }
 
         public string? Otp { get; set; }
+        public string? DateOfBirth { get; set; }
+
 
         public int? OtpAttempts { get; set; }
 
@@ -34,7 +36,10 @@
 
         public string? DeviceToken { get; set; }
 
+        public string? RefreshToken { get; set; }
+
         public string? AccessToken { get; set; }
+
 
         public string? FcmToken { get; set; }
 
