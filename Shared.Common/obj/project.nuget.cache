@@ -4,15 +4,5 @@
   "success": true,
   "projectFilePath": "/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/Shared.Common/Shared.Common.csproj",
   "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "message": "Problem reading the cache file /Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/Shared.Common/obj/project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0.",
-      "projectPath": "/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/Shared.Common/Shared.Common.csproj",
-      "warningLevel": 1,
-      "filePath": "/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/Shared.Common/Shared.Common.csproj",
-      "targetGraphs": []
-    }
-  ]
+  "logs": []
 }

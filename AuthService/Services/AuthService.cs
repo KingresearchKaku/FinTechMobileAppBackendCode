@@ -132,11 +132,6 @@ namespace AuthService.Services
             };
         }
 
-
-
-
-
-
         // 2️⃣ VERIFY OTP → Login success + Token
         public async Task<CommonApiResponse<OtpVerificationResponseDto>> VerifyOtpAsync(OtpVerifyRequestDto otpVerifyRequestDto)
         {
@@ -281,10 +276,10 @@ namespace AuthService.Services
                 {
                     MobileUserId = user.MobileUserId,
                     MobileNumber = user.MobileNumber,
-                    DateOfBirth = user.DateOfBirth,
-                    Name = user.Name,
-                    Email = user.Email,
-                    City = user.City,
+                    DateOfBirth = user.DateOfBirth ?? "",
+                    Name = user.Name ?? "",
+                    Email = user.Email ?? "",
+                    City = user.City ?? "",
                 }
             };
 
@@ -415,25 +410,100 @@ namespace AuthService.Services
         }
 
 
-
-
-
         // 6️⃣ UPDATE FCM TOKEN
-        public Task<CommonApiResponse<bool>> UpdateFcmTokenAsync(string NewFcmToken)
+        public async Task<CommonApiResponse<bool>> UpdateFcmTokenAsync(string NewFcmToken)
         {
-            throw new NotImplementedException();
+            var userId = GetUserIdFromToken();
+            if (userId == Guid.Empty)
+            {
+                return new CommonApiResponse<bool>
+                {
+                    StatusCode = 401,
+                    Message = "Unauthorized"
+                };
+            }
+            var UserInDb = await _dbContext.MobileUsers.FirstOrDefaultAsync(u => u.MobileUserId == userId && u.isActive == true && u.isDeleted == false);
+            if (UserInDb == null)
+            {
+                return new CommonApiResponse<bool>
+                {
+                    StatusCode = 404,
+                    Message = "User not found. Please contact support.",
+
+                };
+            }
+            UserInDb.FcmToken = NewFcmToken;
+            UserInDb.UpdatedAt = DateTime.UtcNow;
+            await _dbContext.SaveChangesAsync();
+            return new CommonApiResponse<bool>
+            {
+                StatusCode = 200,
+                Message = "FCM token updated successfully",
+                Data = true
+            };
+
+
         }
 
         // 7️⃣ LOGOUT
-        public Task<CommonApiResponse<bool>> LogoutAsync(LogoutRequestDto logoutRequestDto)
+        public async Task<CommonApiResponse<bool>> LogoutAsync(LogoutRequestDto logoutRequestDto)
         {
-            throw new NotImplementedException();
+
+            var user = await _dbContext.MobileUsers
+             .FirstOrDefaultAsync(x => x.MobileUserId == logoutRequestDto.MobileUserId);
+            if (user == null)
+            {
+                return new CommonApiResponse<bool>
+                {
+                    StatusCode = 404,
+                    Message = "User not found"
+                };
+            }
+            user.AccessToken = null;
+            user.RefreshToken = null;
+            user.UpdatedAt = DateTime.UtcNow;
+            await _dbContext.SaveChangesAsync();
+            return new CommonApiResponse<bool>
+            {
+                StatusCode = 200,
+                Message = "Logged out successfully",
+                Data = true
+            };
+
         }
 
         // 8️⃣ APP VERSION (independent)
-        public Task<CommonApiResponse<string>> GetAppVersionAsync()
+        public async Task<CommonApiResponse<string>> GetAppVersionAsync()
         {
-            throw new NotImplementedException();
+            var userId = GetUserIdFromToken();
+
+            if (userId == Guid.Empty)
+            {
+                return new CommonApiResponse<string>
+                {
+                    StatusCode = 401,
+                    Message = "Unauthorized"
+                };
+            }
+
+            var UserInDb = await _dbContext.MobileUsers.FirstOrDefaultAsync(u => u.MobileUserId == userId);
+
+            if (UserInDb == null)
+            {
+                return new CommonApiResponse<string>
+                {
+                    StatusCode = 404,
+                    Message = "User not found"
+                };
+            }
+
+            return new CommonApiResponse<string>
+            {
+                StatusCode = 200,
+                Message = "App version fetched successfully",
+                Data = UserInDb.Version ?? "1.0.0"
+            };
+
         }
 
 

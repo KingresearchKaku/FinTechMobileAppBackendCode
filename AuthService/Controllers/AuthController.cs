@@ -16,58 +16,58 @@ namespace AuthService.Controllers
         // private readonly ILogger<AuthController> _logger;
         private readonly IAuthService _authService;
 
-            private readonly IConfiguration _config;    
+        private readonly IConfiguration _config;
 
-        public AuthController(IAuthService authService, IConfiguration config   )
+        public AuthController(IAuthService authService, IConfiguration config)
         {
             _authService = authService;
             _config = config;
 
 
-            
+
         }
 
 
 
-    [HttpGet("check-db")]
-    public async Task<IActionResult> CheckDb()
-    {
-        try
+        [HttpGet("check-db")]
+        public async Task<IActionResult> CheckDb()
         {
-            using var connection = new SqlConnection(
-                _config.GetConnectionString("DefaultConnection")
-            );
+            try
+            {
+                using var connection = new SqlConnection(
+                    _config.GetConnectionString("DefaultConnection")
+                );
 
-            await connection.OpenAsync();
+                await connection.OpenAsync();
 
-            return Ok("✅ Database Connected");
+                return Ok("✅ Database Connected");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"❌ Connection Failed: {ex.Message}");
+            }
         }
-        catch (Exception ex)
-        {
-            return StatusCode(500, $"❌ Connection Failed: {ex.Message}");
-        }
-    }
 
 
 
-   
+
         //OtpLogin Api 
         [HttpPost("otp-login")]
         public async Task<IActionResult> OtpLogin(LoginRequestDto loginRequestDto)
         {
-            
+
 
             // Implement OTP login logic here
-            return Ok( await _authService.OtpLoginAsync(loginRequestDto));
+            return Ok(await _authService.OtpLoginAsync(loginRequestDto));
         }
 
 
         //Otp verification Api 
         [HttpPost("otp-verification")]
-        public async Task<IActionResult>  OtpVerification(OtpVerifyRequestDto otpVerifyRequestDto)
+        public async Task<IActionResult> OtpVerification(OtpVerifyRequestDto otpVerifyRequestDto)
         {
             // Implement OTP login logic here
-            return Ok( await _authService.VerifyOtpAsync(otpVerifyRequestDto));
+            return Ok(await _authService.VerifyOtpAsync(otpVerifyRequestDto));
         }
 
         //OtpLogin Api 
@@ -79,13 +79,13 @@ namespace AuthService.Controllers
         }
 
 
-[Authorize]
+        [Authorize]
         //OtpLogin Api 
         [HttpGet("get-user-details")]
         public async Task<IActionResult> GetUserDetailsById()
         {
             // Implement OTP login logic here
-            return Ok( await _authService.GetUserDetailsAsync());
+            return Ok(await _authService.GetUserDetailsAsync());
         }
 
 
@@ -120,10 +120,10 @@ namespace AuthService.Controllers
         public async Task<IActionResult> Logout(LogoutRequestDto logoutRequestDto)
         {
             // Implement logout logic here
-            return Ok( await _authService.LogoutAsync(logoutRequestDto));
+            return Ok(await _authService.LogoutAsync(logoutRequestDto));
         }
 
-    
+
 
 
 

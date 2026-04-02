@@ -1,15 +1,3 @@
-/Users/harindersahu/Downloads/back-end-testing/FinTechMobileAppBackendCode/Shared.Common/bin/Debug/net8.0/Shared.Common.deps.json
-/Users/harindersahu/Downloads/back-end-testing/FinTechMobileAppBackendCode/Shared.Common/bin/Debug/net8.0/Shared.Common.dll
-/Users/harindersahu/Downloads/back-end-testing/FinTechMobileAppBackendCode/Shared.Common/bin/Debug/net8.0/Shared.Common.pdb
-/Users/harindersahu/Downloads/back-end-testing/FinTechMobileAppBackendCode/Shared.Common/obj/Debug/net8.0/Shared.Common.GeneratedMSBuildEditorConfig.editorconfig
-/Users/harindersahu/Downloads/back-end-testing/FinTechMobileAppBackendCode/Shared.Common/obj/Debug/net8.0/Shared.Common.AssemblyInfoInputs.cache
-/Users/harindersahu/Downloads/back-end-testing/FinTechMobileAppBackendCode/Shared.Common/obj/Debug/net8.0/Shared.Common.AssemblyInfo.cs
-/Users/harindersahu/Downloads/back-end-testing/FinTechMobileAppBackendCode/Shared.Common/obj/Debug/net8.0/Shared.Common.csproj.CoreCompileInputs.cache
-/Users/harindersahu/Downloads/back-end-testing/FinTechMobileAppBackendCode/Shared.Common/obj/Debug/net8.0/Shared.Common.sourcelink.json
-/Users/harindersahu/Downloads/back-end-testing/FinTechMobileAppBackendCode/Shared.Common/obj/Debug/net8.0/Shared.Common.dll
-/Users/harindersahu/Downloads/back-end-testing/FinTechMobileAppBackendCode/Shared.Common/obj/Debug/net8.0/refint/Shared.Common.dll
-/Users/harindersahu/Downloads/back-end-testing/FinTechMobileAppBackendCode/Shared.Common/obj/Debug/net8.0/Shared.Common.pdb
-/Users/harindersahu/Downloads/back-end-testing/FinTechMobileAppBackendCode/Shared.Common/obj/Debug/net8.0/ref/Shared.Common.dll
 /Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/Shared.Common/bin/Debug/net8.0/Shared.Common.deps.json
 /Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/Shared.Common/bin/Debug/net8.0/Shared.Common.dll
 /Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/Shared.Common/bin/Debug/net8.0/Shared.Common.pdb
