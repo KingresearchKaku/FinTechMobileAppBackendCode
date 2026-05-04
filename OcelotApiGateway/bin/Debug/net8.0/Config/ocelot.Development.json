@@ -1,5 +1,6 @@
 ﻿{
     "Routes": [
+        
         {
             "DownstreamPathTemplate": "/api/auth/send-otp",
             "DownstreamScheme": "http",
@@ -26,6 +27,90 @@
             "UpstreamPathTemplate": "/api/auth/verify-otp",
             "UpstreamHttpMethod": [
                 "POST"
+            ]
+        },
+         {
+            "DownstreamPathTemplate": "/api/auth/register",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5131
+                }
+            ],
+            "UpstreamPathTemplate": "/api/auth/register",
+            "UpstreamHttpMethod": [
+                "POST"
+            ]
+        },
+         {
+            "DownstreamPathTemplate": "/api/auth/user-details",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5131
+                }
+            ],
+            "UpstreamPathTemplate": "/api/auth/userDetails",
+            "UpstreamHttpMethod": [
+                "GET"
+            ]
+        },
+         {
+            "DownstreamPathTemplate": "/api/auth/refresh-token",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5131
+                }
+            ],
+            "UpstreamPathTemplate": "/api/auth/refresh-token",
+            "UpstreamHttpMethod": [
+                "POST"
+            ]
+        },
+         {
+            "DownstreamPathTemplate": "/api/auth/logout",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5131
+                }
+            ],
+            "UpstreamPathTemplate": "/api/auth/logout",
+            "UpstreamHttpMethod": [
+                "POST"
+            ]
+        },
+         {
+            "DownstreamPathTemplate": "/api/auth/fcm-token",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5131
+                }
+            ],
+            "UpstreamPathTemplate": "/api/auth/fcm-tokenfcm-token",
+            "UpstreamHttpMethod": [
+                "POST"
+            ]
+        },
+         {
+            "DownstreamPathTemplate": "/api/auth/app-version",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5131
+                }
+            ],
+            "UpstreamPathTemplate": "/api/auth/app-version",
+            "UpstreamHttpMethod": [
+                "GET"
             ]
         }
 

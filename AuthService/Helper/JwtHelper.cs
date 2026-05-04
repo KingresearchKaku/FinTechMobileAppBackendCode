@@ -16,18 +16,23 @@ namespace AuthService.Infrastructure
             _config = config;
         }
 
-        public string GenerateAccessToken(string userId, string mobile)
+        public string GenerateAccessToken(string userId, string mobile, string? name = null)
         {
             var key = new SymmetricSecurityKey(
                 Encoding.UTF8.GetBytes(_config["JwtSettings:Key"]!));
 
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
-            var claims = new[]
+            // Name claim flows through to other services (e.g. BlogsService) so they can
+            // attribute content without an extra DB lookup or cross-service call.
+            var claims = new List<Claim>
             {
-                new Claim(ClaimTypes.NameIdentifier, userId),
-                new Claim(ClaimTypes.MobilePhone, mobile)
+                new(ClaimTypes.NameIdentifier, userId),
+                new(ClaimTypes.MobilePhone, mobile)
             };
+
+            if (!string.IsNullOrWhiteSpace(name))
+                claims.Add(new Claim(ClaimTypes.Name, name));
 
             var token = new JwtSecurityToken(
                 issuer: _config["JwtSettings:Issuer"],

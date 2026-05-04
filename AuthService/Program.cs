@@ -47,8 +47,8 @@ builder.Services.AddRateLimiter(options =>
     // "otp" policy: max 3 send-otp requests per IP per hour
     options.AddFixedWindowLimiter("otp", limiterOptions =>
     {
-        limiterOptions.PermitLimit = 3;
-        limiterOptions.Window = TimeSpan.FromHours(1);
+        limiterOptions.PermitLimit = 100;
+        limiterOptions.Window = TimeSpan.FromMinutes(1);
         limiterOptions.QueueProcessingOrder = QueueProcessingOrder.OldestFirst;
         limiterOptions.QueueLimit = 0;
     });

@@ -1,71 +1,84 @@
-﻿using BlogsService.Dtos;
+using BlogsService.Dtos;
 using BlogsService.Services;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.RateLimiting;
 
 namespace BlogsService.Controllers
 {
     [Authorize]
     [Route("api/blogs")]
     [ApiController]
+    [EnableRateLimiting("otp")]
     public class BlogsController : ControllerBase
     {
+        private readonly IBlogsService _blogsService;
 
-       private readonly IBlogsService _blogsService;
-
-       
-
-       public BlogsController(IBlogsService blogsService)
+        public BlogsController(IBlogsService blogsService)
         {
             _blogsService = blogsService;
         }
 
-       
+        /// <summary>Create a new blog post.</summary>
+        [HttpPost]
+        public async Task<IActionResult> CreateBlog([FromBody] CreateBlogRequestDto request) =>
+            Ok(await _blogsService.CreateBlog(request));
 
-        //Get All Blogs
-        [HttpGet("get-all-blogs")]
-        public async Task<IActionResult> GetAllBlogs(GetBlogRequestDto getBlogRequestDto)
+        /// <summary>List blogs with pagination.</summary>
+        [HttpGet]
+        public async Task<IActionResult> GetAllBlogs([FromQuery] GetBlogRequestDto request) =>
+            Ok(await _blogsService.GetAllBlogs(request));
+
+        /// <summary>Update an existing blog post (owner only).</summary>
+        [HttpPut("{id:int}")]
+        public async Task<IActionResult> UpdateBlog(int id, [FromBody] ManageBlogRequestDto request)
         {
-            var blogs = await _blogsService.GetAllBlogs(getBlogRequestDto);
-            return Ok(blogs);
+            // Route id is authoritative — prevent body/route mismatch
+            request.Id = id;
+            return Ok(await _blogsService.ManageBlog(request));
         }
 
+        /// <summary>Soft-delete a blog post (owner only).</summary>
+        [HttpDelete("{id:int}")]
+        public async Task<IActionResult> DeleteBlog(int id) =>
+            Ok(await _blogsService.DeleteBlogById(id));
 
-        //Manage Blog
-        [HttpPost("manage-blog")]
-        public async Task<IActionResult> ManageBlog()
+        /// <summary>Toggle like/unlike on a blog post.</summary>
+        [HttpPost("{id:int}/likes")]
+        public async Task<IActionResult> ToggleLike(int id) =>
+            Ok(await _blogsService.ManageLikeBlogById(id));
+
+        /// <summary>List comments for a blog post (paginated, flat list).</summary>
+        [HttpGet("{id:int}/comments")]
+        public async Task<IActionResult> GetComments(int id, [FromQuery] GetCommentsRequestDto request)
         {
-            return Ok("Blog Managed");
+            request.BlogId = id;
+            return Ok(await _blogsService.GetComments(request));
         }
 
-        //Delete Blog By Id
-        [HttpDelete("delete-blog-by-id")]
-        public async Task<IActionResult> DeleteBlogById()
+        /// <summary>Add a comment to a blog post.</summary>
+        [HttpPost("{id:int}/comments")]
+        public async Task<IActionResult> AddComment(int id, [FromBody] AddCommentRequestDto request)
         {
-            return Ok("Blog Deleted");
+            request.BlogId = id;
+            return Ok(await _blogsService.AddComment(request));
         }
 
-        //Like Blog By Id
-        [HttpPost("manage-like-blog-by-id")]
-        public async Task<IActionResult> ManageLikeBlogById()
+        /// <summary>Edit a comment (author only).</summary>
+        [HttpPut("{id:int}/comments/{commentId:int}")]
+        public async Task<IActionResult> UpdateComment(
+            int id,
+            int commentId,
+            [FromBody] UpdateCommentRequestDto request)
         {
-            return Ok("Blog Liked");
+            request.BlogId = id;
+            request.CommentId = commentId;
+            return Ok(await _blogsService.ManageCommentBlogById(request));
         }
 
-        //Manage Comment Blog By Id
-        [HttpPost("manage-comment-blog-by-id")]
-        public async Task<IActionResult> ManageCommentBlogById()
-        {
-            return Ok("Blog Commented");
-        }
-
-        //Delete Comment Blog By Id
-        [HttpDelete("delete-comment-blog-by-id")]
-        public async Task<IActionResult> DeleteCommentBlogById()
-        {
-            return Ok("Blog Comment Deleted");
-        }
-        
+        /// <summary>Soft-delete a comment (author or blog owner).</summary>
+        [HttpDelete("{id:int}/comments/{commentId:int}")]
+        public async Task<IActionResult> DeleteComment(int id, int commentId) =>
+            Ok(await _blogsService.DeleteCommentBlogById(id, commentId));
     }
 }

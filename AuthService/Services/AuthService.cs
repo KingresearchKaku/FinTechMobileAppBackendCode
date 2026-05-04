@@ -173,7 +173,7 @@ namespace AuthService.Services
 
             // OTP verified — generate tokens
             var accessToken = _jwtService.GenerateAccessToken(
-                user.MobileUserId.ToString(), user.MobileNumber);
+                user.MobileUserId.ToString(), user.MobileNumber, user.Name);
 
             var (rawRefreshToken, refreshTokenHash) =
                 _jwtService.GenerateRefreshToken(RefreshTokenExpiryDays);
@@ -323,7 +323,7 @@ namespace AuthService.Services
             }
 
             var newAccessToken = _jwtService.GenerateAccessToken(
-                user.MobileUserId.ToString(), user.MobileNumber);
+                user.MobileUserId.ToString(), user.MobileNumber, user.Name);
 
             var (newRawRefreshToken, newRefreshTokenHash) =
                 _jwtService.GenerateRefreshToken(RefreshTokenExpiryDays);
