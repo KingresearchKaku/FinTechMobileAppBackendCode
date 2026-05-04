@@ -20,17 +20,17 @@ namespace BlogsService.Controllers
         }
 
         /// <summary>Create a new blog post.</summary>
-        [HttpPost]
+        [HttpPost("add-blog")]
         public async Task<IActionResult> CreateBlog([FromBody] CreateBlogRequestDto request) =>
             Ok(await _blogsService.CreateBlog(request));
 
         /// <summary>List blogs with pagination.</summary>
-        [HttpGet]
+        [HttpGet("get-all-blogs")]
         public async Task<IActionResult> GetAllBlogs([FromQuery] GetBlogRequestDto request) =>
             Ok(await _blogsService.GetAllBlogs(request));
 
         /// <summary>Update an existing blog post (owner only).</summary>
-        [HttpPut("{id:int}")]
+        [HttpPut("update-blog/{id:int}")]
         public async Task<IActionResult> UpdateBlog(int id, [FromBody] ManageBlogRequestDto request)
         {
             // Route id is authoritative — prevent body/route mismatch
@@ -39,17 +39,17 @@ namespace BlogsService.Controllers
         }
 
         /// <summary>Soft-delete a blog post (owner only).</summary>
-        [HttpDelete("{id:int}")]
+        [HttpDelete("delete-blog/{id:int}")]
         public async Task<IActionResult> DeleteBlog(int id) =>
             Ok(await _blogsService.DeleteBlogById(id));
 
         /// <summary>Toggle like/unlike on a blog post.</summary>
-        [HttpPost("{id:int}/likes")]
+        [HttpPost("toggle-like/{id:int}")]
         public async Task<IActionResult> ToggleLike(int id) =>
             Ok(await _blogsService.ManageLikeBlogById(id));
 
         /// <summary>List comments for a blog post (paginated, flat list).</summary>
-        [HttpGet("{id:int}/comments")]
+        [HttpGet("get-comments/{id:int}")]
         public async Task<IActionResult> GetComments(int id, [FromQuery] GetCommentsRequestDto request)
         {
             request.BlogId = id;
@@ -57,7 +57,7 @@ namespace BlogsService.Controllers
         }
 
         /// <summary>Add a comment to a blog post.</summary>
-        [HttpPost("{id:int}/comments")]
+        [HttpPost("add-comment/{id:int}")]
         public async Task<IActionResult> AddComment(int id, [FromBody] AddCommentRequestDto request)
         {
             request.BlogId = id;
@@ -65,7 +65,7 @@ namespace BlogsService.Controllers
         }
 
         /// <summary>Edit a comment (author only).</summary>
-        [HttpPut("{id:int}/comments/{commentId:int}")]
+        [HttpPut("update-comment")]
         public async Task<IActionResult> UpdateComment(
             int id,
             int commentId,
@@ -77,7 +77,7 @@ namespace BlogsService.Controllers
         }
 
         /// <summary>Soft-delete a comment (author or blog owner).</summary>
-        [HttpDelete("{id:int}/comments/{commentId:int}")]
+        [HttpDelete("delete-comment")]
         public async Task<IActionResult> DeleteComment(int id, int commentId) =>
             Ok(await _blogsService.DeleteCommentBlogById(id, commentId));
     }
